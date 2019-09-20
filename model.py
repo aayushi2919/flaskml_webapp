@@ -39,7 +39,7 @@ class NLPModel(object):
             pickle.dump(self.vectorizer, f)
             print("Pickled vectorizer at {}".format(path))
 
-    def pickle_clf(self, path='models/SentimentClassifier.pkl'):
+    def pickle_clf(self, path='models/Classifier.pkl'):
       
         with open(path, 'wb') as f:
             pickle.dump(self.clf, f)
