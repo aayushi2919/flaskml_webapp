@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 20 11:55:35 2019
 
-@author: aaybagga
-"""
 
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
