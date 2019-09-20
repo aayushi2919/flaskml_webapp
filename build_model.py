@@ -30,7 +30,7 @@ def build_model():
     model.pickle_clf()
     model.pickle_vectorizer()
 
-    #model.plot_roc(X_test, y_test)
+    
 
 
 if __name__ == "__main__":
