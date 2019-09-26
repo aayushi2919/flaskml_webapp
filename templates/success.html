@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>ML API</title>
+  <style>
+body {
+  background-color: black;
+  text-align:center;
+}
+h1{
+  color: white;
+  padding-top: 100px;
+}
+div{
+  border-color: white;
+}
+h4{
+  color: white;
+}
+
+</style>
+<!--
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">-->
+
+</head>
+
+<body background ="black">
+ <div class="login">
+	<h1>FITARA CLASSIFICATION</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    
+		<input type="textarea" rows="4" cols="50" name="interview_score" placeholder="doc" required="required" />
+    <br><br>
+      <div class="w3-dropdown-hover">
+        <button type="submit" class="w3-button w3-black">Predict using Naive Bayes</button>
+        
+
+    <!--     
+   <button class="btn btn-primary btn-block btn-large>Hover Over Me!</button>-->
+  
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+     <!-- <a href="#" class="w3-bar-item w3-button">Predict using RNN</a>
+      <a href="#" class="w3-bar-item w3-button">Predict using Naive Bayes</a>
+      -->
+    </div>
+  </div>
+      
+    </form>
+ 
+    <form action="{{ url_for('predict2')}}"method="post">
+    
+    <input type="textarea" rows="4" cols="50" name="interview_score" placeholder="doc" required="required" />
+    <br><br>
+      <div class="w3-dropdown-hover">
+        <button type="submit" class="w3-button w3-black">Predict using RNN</button>
+        
+   <button class="btn btn-primary btn-block btn-large>Hover Over Me!</button>-->
+  
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+     <!-- <a href="#" class="w3-bar-item w3-button">Predict using RNN</a>
+      <a href="#" class="w3-bar-item w3-button">Predict using Naive Bayes</a>
+      -->
+    </div>
+  </div>
+      
+    </form>
+ 
+
+   <br>
+   <br>
+   <h4>
+   {{ prediction_text }}
+ </h4>
+
+ </div>
+
+
+</body>
+</html>
